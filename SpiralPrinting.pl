@@ -37,21 +37,21 @@ while(my $line = $fh->getline)
             $print++;
         }
         $row++;    
-				print "\n" and last if($print == $totalElements);
+	print "\n" and last if($print == $totalElements);
         for(my $index = $row; $index <= $rows-1; $index++) #Move down                                                        
         {
             print $matrix[$index][$cols-1]." ";
 	    $print++;
         }
         $cols--;
-				print "\n" and last if($print == $totalElements);
+	print "\n" and last if($print == $totalElements);
         for(my $index = $cols-1; $index >= $col; $index--) #Move left                                                        
         {
             print $matrix[$rows-1][$index]." ";
             $print++;
         }
         $rows--;
-				print "\n" and last if($print == $totalElements);
+	print "\n" and last if($print == $totalElements);
         for(my $index = $rows-1; $index >= $row; $index--) #Move up                                                          
         {
             print $matrix[$index][$col]." ";
